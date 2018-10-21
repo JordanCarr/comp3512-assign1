@@ -1,0 +1,316 @@
+/*Colour Pallet*/
+/**/
+/*text colour: rgb(240, 240, 240)*/
+/*page background: rgb(42, 42, 42)*/
+/*section background: rgb(85,85,85)*/
+html {
+    min-width: 500px;
+    min-height: 500px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    height: calc(100% - 2em);
+    color: rgb(235, 235, 235);
+    background-color: rgb(28, 28, 28);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1, h2 {
+    padding: 0.5em 0 0 0;
+    margin: 0;
+}
+
+.section {
+    background-color: rgb(60, 60, 60);
+}
+
+.defaultView {
+    width: 100%;
+    display: none;
+    padding: 0.75em;
+    box-sizing: border-box;
+    height: inherit;
+}
+
+.galleryPanel {
+    flex: 1;
+    padding: 0.5em;
+    margin: 0 1em 0 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.gallerySelection {
+    flex: 4;
+    display: flex;
+}
+
+.galleryExtra {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.galleryInfo {
+    flex: 3;
+    flex-wrap: wrap;
+    margin: 0 0 0.5em;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.galleryMap {
+    flex: 4;
+    margin: 0.5em 0 0;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+#paintingTable {
+    width: 100%;
+}
+
+.galleryPaintings {
+    flex: 1;
+    margin: 0 0 0 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.paintingRow:focus,
+.paintingRow:hover {
+    outline: 1px solid #4cd964;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.loadingScreen {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+}
+
+#loadingSymbol {
+    animation: rotate 1s linear 0s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.paintingView {
+    width: 100%;
+    height: inherit;
+    display: none;
+    padding: 0.75em;
+    box-sizing: border-box;
+}
+
+.painting {
+    flex: 3;
+    padding: 0;
+    margin: 0 1em 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.painting img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.paintingInfo {
+    padding: 0.5em;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.paintingHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paintingClose {
+    flex: 1;
+    padding: 0 0.2em 0 0;
+    color: #f0f0f0;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.paintingClose:hover,
+.paintingClose:focus {
+    color: #ff6060;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#PaintingTAContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 10;
+}
+
+div#paintingTitle {
+    font-size: xx-large;
+    justify-content: center;
+    font-weight: 400;
+    flex: 2;
+    text-align: center;
+}
+
+div#paintingArtist {
+    font-size: x-large;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+div#paintingHeaderSpeak {
+    flex: 1;
+    padding: 0 0.2em 0 0;
+    font-size: 40px;
+}
+
+div#paintingMetadata {
+    flex: 1;
+}
+
+div#paintingMuseumLink {
+    flex: 1;
+}
+
+div#paintingWikiLink {
+    flex: 1;
+}
+
+div.paintingDescSection {
+    flex: 10;
+    display: flex;
+}
+
+div#paintingDescription {
+    flex: 8;
+}
+
+div#paintingDescriptionSpeak {
+    flex: 1;
+    padding: 0;
+    font-size: 40px;
+}
+
+.speak {
+    color: transparent;
+    text-shadow: 0 0 #FFFFFF;
+}
+
+.speak:hover,
+.speak:focus {
+    text-shadow: 0 0 #4cd964;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+    color: #5ac8fa;
+}
+
+a:visited {
+    color: #ff3b30;
+    text-shadow: white;
+}
+
+a:hover,
+th:hover,
+a:visited:hover {
+    color: #4cd964;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.infoContainer:nth-child(n) * {
+    margin-top: 0;
+    margin-right: 1em;
+}
+
+.infoContainer:nth-child(n) p,
+.infoContainer:nth-child(n) a {
+    font-size: x-large;
+}
+
+.galleryList {
+    padding-left: 0.5em;
+}
+
+.galleryList li {
+    list-style: none;
+    font-size: large;
+}
+
+.galleryList li:hover {
+    color: #4cd964;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    color: rgb(0, 122, 355);
+    font-weight: bold;
+}
+
+.selected {
+    outline: white 1px;
+}

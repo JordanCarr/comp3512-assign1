@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/default.css" type="text/css"/>
+    <title>COMP 3512 Assign1</title>
+</head>
+<body>
+
+<!--Begin Header-->
+<div class="header">
+    <h1>COMP 3512 Assign1</h1>
+    <h2>Jordan Carr</h2>
+</div>
+
+<!--Begin Loading Screen-->
+<div class="loadingScreen">
+    <div id="loadingSymbol">↻</div>
+</div>
+
+<!--Begin Default View-->
+<div class="defaultView">
+    <div class="galleryPanel section">
+        <h3 class="placeholderLabel">List of Galleries</h3>
+        <ul class="galleryList">
+        </ul>
+    </div>
+    <div class="gallerySelection">
+        <div class="galleryExtra">
+            <div class="galleryInfo section">
+                <h3 class="placeholderLabel">Gallery Info</h3>
+            </div>
+            <div class="galleryMap section">
+                <h3 class="placeholderLabel">Map</h3>
+            </div>
+        </div>
+        <div class="galleryPaintings section">
+            <h3 class="placeholderLabel">Paintings</h3>
+            <table id="paintingTable" class="hidden">
+                <tr>
+                    <th></th>
+                    <th id="artistHeader">Artist</th>
+                    <th id="titleHeader">Title</th>
+                    <th id="yearHeader">Year</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--Begin Painting View-->
+<div class="paintingView hidden">
+    <div class="painting">
+        <img alt="Title" src="images/medium/010020.jpg">
+    </div>
+    <div class="paintingInfo section">
+        <div class="paintingHeader">
+            <span class="paintingClose">&times;</span>
+            <div id="PaintingTAContainer">
+                <div id="paintingTitle">Title</div>
+                <div id="paintingArtist">Artist</div>
+            </div>
+            <div id="paintingHeaderSpeak">
+                <span class="speak">🗣</span>
+            </div>
+        </div>
+        <div id="paintingMetadata"></div>
+        <div id="paintingMuseumLink"><a></a></div>
+        <div id="paintingWikiLink"><a></a></div>
+        <div class="paintingDescSection">
+            <div id="paintingDescription"></div>
+            <div id="paintingDescriptionSpeak">
+                <span class="speak">🗣</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/assign1.js"></script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+        async defer></script>
+</body>
+</html>
